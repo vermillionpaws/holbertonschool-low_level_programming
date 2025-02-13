@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * Description: This is the main entry point for our program.
+ * Return: This should return 0.
+*/
+
 int main(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
