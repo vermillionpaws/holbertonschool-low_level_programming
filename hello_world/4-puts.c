@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/** 
+/**
  * main - Entry point
  * Description: This is the main entry point for our program.
  * Return: This should return 0.
