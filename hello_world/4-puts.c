@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-/* Entry point for program int main(void)
-			   {
-			   	return (0);
-			   }
+/** 
+ * main
+ * Description: This is the main entry point for our program.
 */
 
 int main(void)
