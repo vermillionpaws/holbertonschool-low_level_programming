@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point for program
+ *
+ * Description: Print numbers from 0 to 9 and then add a newline.
+ *
+ * Return: Always 0 (Success) and all numbers ranging from 0 to 9
+ */
+
 int main(void)
 {
 	int n = 0;
