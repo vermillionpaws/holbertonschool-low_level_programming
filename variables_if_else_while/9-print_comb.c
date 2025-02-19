@@ -3,16 +3,16 @@
 /**
  * main - Entry point for program
  *
- * Description: print base16
+ * Description: print combinations of single digit numbers
  *
- * Return: Always 0 (Success) and base16
+ * Return: Always 0 (Success) and combinations
  */
 
 int main(void)
 {
 	int i;
 
-	for (i = 0; i < 10; i++) 
+	for (i = 0; i < 10; i++)
 	{
 		putchar('0' + i);
 		if (i < 9) {
