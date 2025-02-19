@@ -3,7 +3,7 @@
 /**
  * main - Entry point for program
  *
- * Description: Print numbers from 0 to 9 and then add a newline using only putchar
+ * Description: Print 0 to 9 and then add a newline using only putchar
  *
  * Return: Always 0 (Success) and all numbers ranging from 0 to 9
  */
