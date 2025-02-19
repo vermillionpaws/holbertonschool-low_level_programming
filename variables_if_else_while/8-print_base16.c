@@ -13,9 +13,11 @@ int main(void)
 	int i;
 	for (i = 0; i < 16; i++)
 	{
-		if (i < 10) {
+		if (i < 10)
+		{
 			putchar('0' + i);
-		} else {
+		} else 
+		{
 			putchar('a' + (i - 10));
 		}
 	}
