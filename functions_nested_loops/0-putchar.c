@@ -10,6 +10,13 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char txt[10] = "_putchar\n";
+	int n;
+
+	for (n = 0; n < 10; n++)
+	{
+		_putchar(txt[n]);
+	}
+
 	return (0);
 }
