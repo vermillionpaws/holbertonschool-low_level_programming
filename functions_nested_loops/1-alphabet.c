@@ -2,7 +2,7 @@
 #include "main.h"
 
 /*
-*	Program entry: print_alphabet
+*	print_alphabet - Program entry
 *	Description: Print entire alphabet
 *	Return: Return entire alphabet if successful.
 */
