@@ -2,8 +2,8 @@
 #include "main.h"
 
 /*
-*	Program: Print alphabet
-*
+*	Program entry: print_alphabet
+*	Description: Print entire alphabet
 *	Return: Return entire alphabet if successful.
 */
 
