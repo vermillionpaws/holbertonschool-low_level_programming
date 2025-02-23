@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
-*	print_alphabet - Program entry
-*	Description: Print entire alphabet
-*	Return: Return entire alphabet if successful.
-*/
+ * print_alphabet - prints the alphabet in lowercase)
+ *
+ * Return: void if successful.
+ */
 
 void print_alphabet(void)
 {

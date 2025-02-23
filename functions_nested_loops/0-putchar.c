@@ -2,22 +2,19 @@
 #include "main.h"
 
 /**
- * main - Entry point for program
- *
- * Description: print "_putchar"
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+*
+* Return: returns 0 if succesful.
+*/
 
 int main(void)
 {
-	char txt[9] = "_putchar\n";
-	int n;
+	char textSample[9] = "_putchar\n";
+	int i;
 
-	for (n = 0; n < 9; n++)
+	for (i = 0; i < 9; i++)
 	{
-		_putchar(txt[n]);
+		_putchar(textSample[i]);
 	}
-
 	return (0);
 }
