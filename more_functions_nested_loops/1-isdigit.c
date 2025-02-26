@@ -2,8 +2,8 @@
 
 /**
 * _isdigit - entry point
-* @c: the digit to be checked
-* Return: return a digit
+* @digit: digit parameter
+* Return: return 1 if its a digit, 0 otherwise
 */
 
 int _isdigit(int digit)
