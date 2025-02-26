@@ -4,7 +4,7 @@
 /**
 *	main - entry point
 *	multiply 2 numbers
-*	return: print multiplied numbers
+*	Return: print multiplied numbers
 */
 
 int main(void)
