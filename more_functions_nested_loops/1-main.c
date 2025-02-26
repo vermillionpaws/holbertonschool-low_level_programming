@@ -1,12 +1,11 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
-* main - entry point
-* @c: the digit to be checked
-* Return: return a digit
-*/
-
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     char c;
