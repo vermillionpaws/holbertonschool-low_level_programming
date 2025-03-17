@@ -1,24 +1,28 @@
+/**
+ * print_alphabet_x10 - entry point
+ *
+ * Description: prints alphabet 10 times in lowercase
+ *
+ * Return: returns 0
+ */
 #include <stdio.h>
 #include "main.h"
 
-/**
- * print_alphabet_x10 - prints the alphabet 10 times.
- *
- * Return: void
- */
-
 void print_alphabet_x10(void)
 {
-	int i;
+	char str[] = "abcdefghijklmnopqrstuvwxyz";
+	int contador = 0;
+	int i = 0;
 
-	int times;
-
-	for (times = 0; times < 10; times++)
+	while (contador < 10)
 	{
-		for (i = 97; i <= 122; i++)
+		i = 0;
+		while (str[i] != '\0')
 		{
-			_putchar(i);
+			_putchar(str[i]);
+			i++;
 		}
+		contador++;
 		_putchar('\n');
 	}
 }

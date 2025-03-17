@@ -1,13 +1,15 @@
-#include "main.h"
-
 /**
- * add - Entry point.
- * @num1: the first addend.
- * @num2: the second addend.
- * Return: the sum of @num1 and @num2.
+ * add - makes a sum
+ * @a: number
+ * @b: number
+ *
+ * Description: makes the sum of two integers
+ * Return: returns 0
  */
 
-int add(int num1, int num2)
+int add(int a, int b)
 {
-	return ((num1 + num2));
+	int r = a + b;
+
+	return (r);
 }

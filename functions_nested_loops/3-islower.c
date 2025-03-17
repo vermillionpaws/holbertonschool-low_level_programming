@@ -1,27 +1,23 @@
+/**
+ * _islower - shows if c is lowercase
+ * @c: parameter c
+ *
+ * Description: shows 1 if c is lowercase 0
+ * Return: returns 0
+ */
 #include <stdio.h>
 #include "main.h"
-
-/**
- * _islower - Entry point.
- * @c: The character to be checked.
- *
- * Return: 1 if 'c' is a lowercase letter (a-z), 0 otherwise.
- */
+#include <ctype.h>
 
 int _islower(int c)
 {
-	int currentLetter = 97;
-
-	while (currentLetter <= 122)
+	if (islower(c))
 	{
-		if (c == currentLetter)
-		{
-			return (1);
-		}
-		else
-		{
-			currentLetter++;
-		}
+		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
+

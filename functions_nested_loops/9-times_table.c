@@ -1,47 +1,49 @@
-#include <stdio.h>
+/**
+ * times_table - prints the table
+ *
+ * Description: shows all of the multiplying tables
+ * Return: returns 0
+ */
 #include "main.h"
 
-/**
- * times_table - prints the multiplication tables up to 9.
- *
- * Return: void.
- */
 void times_table(void)
 {
-	int i, j;
+	int num, ope;
+	int mul = 0;
 
-	for (i = 0; i <= 9; i++)
+	while (mul < 10)
 	{
-		for (j = 0; j <= 9; j++)
+		num = 0;
+		while (num < 10)
 		{
-			int result = i * j;
-
-			if (result < 10)
+			ope = mul * num;
+			if (ope == 0 && num == 0)
 			{
-				if (j != 0)
-				{
-					_putchar(' ');
-				}
-				_putchar('0' + result);
-				if (j != 9)
-				{
-					_putchar(',');
-				}
+				_putchar(ope + '0');
 			}
-			else
+			else if (ope == 0 && num > 0)
 			{
-				_putchar('0' + (result / 10));
-				_putchar('0' + (result % 10));
-				if (j != 9)
-				{
-					_putchar(',');
-				}
+				_putchar(' ');
+				_putchar(ope + '0');
 			}
-			if (j < 9 && j != 10)
+			else if (ope > 0 && ope < 10)
 			{
+				_putchar(' ');
+				_putchar(ope + '0');
+			}
+			else if (ope >= 10)
+			{
+				_putchar(ope / 10 + '0');
+				_putchar(ope % 10 + '0');
+			}
+			num++;
+			if (num != 10)
+			{
+				_putchar(',');
 				_putchar(' ');
 			}
 		}
 		_putchar('\n');
+		mul++;
 	}
 }
