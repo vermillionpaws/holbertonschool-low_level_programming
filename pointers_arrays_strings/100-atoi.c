@@ -1,41 +1,55 @@
 #include "main.h"
-#include <stdbool.h>
-#include <ctype.h>
 #include <limits.h>
-/**
- * _atoi - converts a giving string into an integer.
- * @str: the given string.
- * Return: the given string converted into int.
- */
-int _atoi(char *str)
-{
-bool isNegative = false;
-unsigned int strIntValue = 0;
 
-while (isspace(*str))
+/**
+ * _atoi - converts a string to an integer
+ * @s: input string
+ *
+ * Description: Converts a string to an integer
+ *
+ * Return: The integer value of the converted string
+ */
+int _atoi(char *s)
 {
-str++;
+int i = 0;
+int sign = 1;
+int result = 0;
+int found_digit = 0;
+
+while (s[i] != '\0')
+{
+if (s[i] == '-')
+{
+sign *= -1;
 }
-while (*str == '+' || *str == '-' || isspace(*str))
+else if (s[i] == '+')
 {
-if (*str == '-')
-{
-isNegative = !isNegative;
+sign *= 1;
 }
-str++;
+else if (s[i] >= '0' && s[i] <= '9')
+{
+if (result > (INT_MAX / 10) ||
+(result == (INT_MAX / 10) && (s[i] - '0') > (INT_MAX % 10)))
+{
+if (sign == 1)
+{
+return (INT_MAX);
 }
-while (*str != '\0' && !isdigit(*str))
+else
 {
-str++;
+return (INT_MIN);
 }
-while (isdigit(*str))
+}
+result = result * 10 + (s[i] - '0');
+found_digit = 1;
+}
+else if (found_digit)
 {
-if (strIntValue >= INT_MAX)
-{
-strIntValue = INT_MAX + 1;
 break;
 }
-strIntValue = strIntValue * 10 + (*str - '0');
-str++;
-return (isNegative ? -strIntValue : strIntValue);
+i++;
 }
+
+return (result *sign);
+}
+

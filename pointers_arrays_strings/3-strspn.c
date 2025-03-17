@@ -1,37 +1,36 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdbool.h>
+#include <stddef.h>
 
 /**
- * _strspn - gets the length of a prefix substring.
- * @str: the string the be evaluated.
- * @accept: string containing the characters to match.
- * Return: the number of bytes in the initial segment of @str
- * only found in @accept.
+ * _strspn - gets length of prefix substring
+ *@s: string to be searched
+ *@accept: the set of bytes to match
+ *Return: num of bytes on initial s
  */
-unsigned int _strspn(char *str, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int num_bytes = 0;
-	bool isMatch = false;
-	char *temp_accept;
+	unsigned int count = 0;
+	int found;
+	char *a;
 
-	for (; *str; str++)
+	while (*s != '\0')
 	{
-		isMatch = 0;
-		temp_accept = accept;
-		while (*temp_accept)
+		found = 0;
+		for (a = accept; *a != '\0'; a++)
 		{
-			if (*str == *temp_accept)
+			if (*s == *a)
 			{
-				isMatch = 1;
+				found = 1;
 				break;
 			}
-			temp_accept++;
 		}
-		if (isMatch)
-			num_bytes++;
-		else
-			return (num_bytes);
+
+		if (!found)
+			break;
+
+		count++;
+		s++;
 	}
-	return (num_bytes);
+
+	return (count);
 }

@@ -1,26 +1,23 @@
-#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
-/**
- * print_array - prints a given number of elements from an array of integers.
- * @arr: the given array.
- * @size: the amount of elements to be printed.
- * Return: void.
- */
-void print_array(int *arr, int size)
-{
-int i;
+#include "main.h"
 
-if (size <= 0 || arr == NULL)
+/**
+ * print_array - prints an array
+ * @a: array of integers
+ * @n: number of elements to be printed
+ * Description: prints ellements of an array of integers commas etc in order
+ */
+void print_array(int *a, int n)
 {
-printf("\n");
-return;
-}
-for (i = 0; i < size; i++)
-{
-printf("%d", arr[i]);
-if (i < size - 1)
-printf(", ");
-}
-printf("\n");
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		if (i != 0)
+		{
+			printf(", ");
+		}
+		printf("%d", a[i]);
+	}
+	printf("\n");
 }

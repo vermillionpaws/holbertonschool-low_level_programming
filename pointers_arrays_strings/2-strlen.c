@@ -1,14 +1,19 @@
 #include "main.h"
-/**
- * _strlen - Returns the length of a given string by its pointer.
- * @str: The given string.
- * Return: The difference between the start and end of the string.
- */
-int _strlen(char *str)
-{
-char *firstChar = str;
 
-while (*str)
-str++;
-return (str - firstChar);
+/**
+ * _strlen - length of a string
+ * @s: character
+ * Description: shows the length of a string
+ * Return: returns 1
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+	int c = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		c += 1;
+	}
+	return (c);
 }
