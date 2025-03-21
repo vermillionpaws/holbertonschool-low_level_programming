@@ -10,4 +10,16 @@
  *return 0
  */
 
-int int_index(int *array, int size, int (*cmp)(int)) {}
+int int_index(int *array, int size, int (*cmp)(int)) 
+{
+	int i = 0;
+
+	if (!arr || size <= 0 || !cmp)
+		return (-1);
+	for (; i < size; i++)
+	{
+		if (cmp(arr[i]) > 0)
+			return (i);
+	}
+	return (-1);
+}
