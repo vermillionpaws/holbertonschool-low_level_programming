@@ -4,9 +4,9 @@
 /**
  * get_op_func - selects the function according to the passed argument.
  * @s: the character containing the operator selector.
- *
+*
  * Return: pointer to the function according to @s, NULL on error.
- */
+*/
 int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;

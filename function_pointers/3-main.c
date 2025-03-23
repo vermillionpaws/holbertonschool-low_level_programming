@@ -1,30 +1,25 @@
 #include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * main - Entry point.
+ * @argc: argument count.
+ * @argv: argument vector.
+*
+ * Return: 0 on success.
+*/
+int main(int argc, char **argv)
+{
+	int (*op_func)(int, int);
+	int num1, num2;
 
-int L(int A, char **B) {
-	int (*F)(int, int);
-	int C, D;
-	char *E = B[2];
-	
-	if (A != 4) {
-		H("Error\n");
-		I 98;
-	}
-	C = G(B[1]);
-	D = G(B[3]);
+	(void)argc;
 
-	if (((E[0] == '/' || E[0] == '%') && D == 0)) {
-		H("Error\n");
-		I 100;
-	}
-	F = get_op_func(B[2]);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
-	if (!F) {
-		H("Error\n");
-		I 99;
-	}
-	H("%d\n", F(C, D));
-	I J;
+	op_func = get_op_func(argv[2]);
+
+	printf("%d\n", op_func(num1, num2));
+return (0);
 }
