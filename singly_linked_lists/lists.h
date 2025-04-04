@@ -20,3 +20,5 @@ typedef struct list_s {
 /* Function prototypes */
 size_t print_list(const list_t *h);
 int _putchar(char c);
+
+#endif /* LISTS_H */
